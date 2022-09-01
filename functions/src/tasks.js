@@ -26,7 +26,7 @@ export async function createTask(req,res) { // will add user id and a time stamp
     getTasks(req, res); // send back full list of task
 }
 
-export function updateTask(req, res) {
+export async function updateTask(req, res) {
     const taskUpdate = req.body;
     const { taskId } = req.params;
     const db = dbConnect();
